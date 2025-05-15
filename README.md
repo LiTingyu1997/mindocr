@@ -1,7 +1,7 @@
 <!--start-->
 <div align="center" markdown>
 
-# MindOCR
+# MindSpore OCR
 
 </div>
 <!--end-->
@@ -29,15 +29,15 @@ English | [中文](README_CN.md)
 
 <!--start-->
 ## Introduction
-MindOCR is an open-source toolbox for OCR development and application based on [MindSpore](https://www.mindspore.cn/en), which integrates series of mainstream text detection and recognition algorihtms/models, provides easy-to-use training and inference tools. It can accelerate the process of developing and deploying SoTA text detection and recognition models in real-world applications, such as DBNet/DBNet++ and CRNN/SVTR, and help fulfill the need of image-text understanding.
+MindSpore OCR is an open-source toolbox for OCR development and application based on [MindSpore](https://www.mindspore.cn/en), which integrates series of mainstream text detection and recognition algorihtms/models, provides easy-to-use training and inference tools. It can accelerate the process of developing and deploying SoTA text detection and recognition models in real-world applications, such as DBNet/DBNet++ and CRNN/SVTR, and help fulfill the need of image-text understanding.
 
 
 <details open markdown>
 <summary> Major Features </summary>
 
 - **Modular design**: We decoupled the OCR task into several configurable modules. Users can setup the training and evaluation pipelines, customize the data processing pipeline and model architectures easily by modifying just few lines of code.
-- **High-performance**: MindOCR provides a series of pretrained weights trained with optimized configurations that reach competitive performance on OCR tasks.
-- **Low-cost-to-apply**: Easy-to-use inference tools are provided in MindOCR to perform text detection and recognition tasks.
+- **High-performance**: MindSpore OCR provides a series of pretrained weights trained with optimized configurations that reach competitive performance on OCR tasks.
+- **Low-cost-to-apply**: Easy-to-use inference tools are provided in MindSpore OCR to perform text detection and recognition tasks.
 </details>
 
 The following is the corresponding `mindocr` versions and supported
@@ -59,7 +59,7 @@ mindspore versions.
 
 #### Prerequisites
 
-MindOCR is built on MindSpore AI framework and is compatible with the following framework versions. installation guideline for Training, please refer to the installation links shown below.
+MindSpore OCR is built on MindSpore AI framework and is compatible with the following framework versions. installation guideline for Training, please refer to the installation links shown below.
 
 - mindspore [[install](https://www.mindspore.cn/install)] Please install correct MindSpore version refer to `mindocr` versions.
 - python >= 3.7
@@ -161,7 +161,7 @@ pip install mindocr
 
 ### 1. Text Detection and Recognition Demo
 
-After installing MindOCR, we can run text detection and recognition on an arbitrary image easily as follows.
+After installing MindSpore OCR, we can run text detection and recognition on an arbitrary image easily as follows.
 
 ```shell
 python tools/infer/text/predict_system.py --image_dir {path_to_img or dir_to_imgs} \
@@ -191,7 +191,7 @@ python tools/train.py --config {path/to/model_config.yaml}
 
 The `--config` arg specifies the path to a yaml file that defines the model to be trained and the training strategy including data process pipeline, optimizer, lr scheduler, etc.
 
-MindOCR provides SoTA OCR models with their training strategies in `configs` folder.
+MindSpore OCR provides SoTA OCR models with their training strategies in `configs` folder.
 You may adapt it to your task/dataset, for example, by running
 
 ```shell
@@ -216,7 +216,7 @@ For more illustration and usage, please refer to the model training section in [
 
 ### 3. Model Offline Inference
 
-You can do MindSpore Lite inference in MindOCR using **MindOCR models** or **Third-party models** (PaddleOCR, MMOCR, etc.). Please refer to [Model Offline Inference Tutorial](docs/en/inference/inference_tutorial.md)
+You can do MindSpore Lite inference in MindSpore OCR using **MindSpore OCR models** or **Third-party models** (PaddleOCR, MMOCR, etc.). Please refer to [Model Offline Inference Tutorial](docs/en/inference/inference_tutorial.md)
 
 ## Tutorials
 
@@ -295,11 +295,11 @@ You can do MindSpore Lite inference in MindOCR using **MindOCR models** or **Thi
 
 For the detailed performance of the trained models, please refer to [configs](configs).
 
-For details of MindSpore Lite inference models support, please refer to [MindOCR Models Support List](docs/en/inference/mindocr_models_list.md) and [Third-party Models Support List](docs/en/inference/thirdparty_models_list.md) (PaddleOCR etc.).
+For details of MindSpore Lite inference models support, please refer to [MindSpore OCR Models Support List](docs/en/inference/mindocr_models_list.md) and [Third-party Models Support List](docs/en/inference/thirdparty_models_list.md) (PaddleOCR etc.).
 
 ## Dataset List
 
-MindOCR provides a [dataset conversion tool](https://github.com/mindspore-lab/mindocr/blob/main/tools/dataset_converters) to OCR datasets with different formats and support customized dataset by users. We have validated the following public OCR datasets in model training/evaluation.
+MindSpore OCR provides a [dataset conversion tool](https://github.com/mindspore-lab/mindocr/blob/main/tools/dataset_converters) to OCR datasets with different formats and support customized dataset by users. We have validated the following public OCR datasets in model training/evaluation.
 
 <details close markdown>
 <summary>General OCR Datasets</summary>
@@ -461,7 +461,7 @@ which can be enabled by add "shape_list" to the `eval.dataset.output_columns` li
 
 ### How to Contribute
 
-We appreciate all kinds of contributions including issues and PRs to make MindOCR better.
+We appreciate all kinds of contributions including issues and PRs to make MindSpore OCR better.
 
 Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for the contributing guideline. Please follow the [Model Template and Guideline](mindocr/models/README.md) for contributing a model that fits the overall interface :)
 

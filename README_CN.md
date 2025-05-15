@@ -1,7 +1,7 @@
 <!--start-->
 <div align="center" markdown>
 
-# MindOCR
+# MindSpore OCR
 </div>
 
 <!--end-->
@@ -30,15 +30,15 @@
 
 <!--start-->
 ## 简介
-MindOCR是一个基于[MindSpore](https://www.mindspore.cn/) 框架开发的OCR开源工具箱，集成系列主流文字检测识别的算法、模型，并提供易用的训练和推理工具，可以帮助用户快速开发和应用业界SoTA文本检测、文本识别模型，如DBNet/DBNet++和CRNN/SVTR，满足图像文档理解的需求。
+MindSpore OCR是一个基于[MindSpore](https://www.mindspore.cn/) 框架开发的OCR开源工具箱，集成系列主流文字检测识别的算法、模型，并提供易用的训练和推理工具，可以帮助用户快速开发和应用业界SoTA文本检测、文本识别模型，如DBNet/DBNet++和CRNN/SVTR，满足图像文档理解的需求。
 
 
 <details open markdown>
 <summary> 主要特性 </summary>
 
-- **模块化设计**: MindOCR将OCR任务解耦成多个可配置模块，用户只需修改几行代码，就可以轻松地在定制化的数据和模型上配置训练、评估的全流程；
-- **高性能**: MindOCR提供的预训练权重和训练方法可以使其达到OCR任务上具有竞争力的表现；
-- **易用性**: MindOCR提供易用工具帮助在真实世界数据中进行文本的检测和识别。
+- **模块化设计**: MindSpore OCR将OCR任务解耦成多个可配置模块，用户只需修改几行代码，就可以轻松地在定制化的数据和模型上配置训练、评估的全流程；
+- **高性能**: MindSpore OCR提供的预训练权重和训练方法可以使其达到OCR任务上具有竞争力的表现；
+- **易用性**: MindSpore OCR提供易用工具帮助在真实世界数据中进行文本的检测和识别。
 </details>
 
 以下是对应的“mindocr”版本和支持 Mindspore 版本。
@@ -58,7 +58,7 @@ MindOCR是一个基于[MindSpore](https://www.mindspore.cn/) 框架开发的OCR�
 
 #### MindSpore相关环境准备
 
-MindOCR基于MindSpore AI框架开发，并适配以下框架版本。模型训练场景：
+MindSpore OCR基于MindSpore AI框架开发，并适配以下框架版本。模型训练场景：
 
 - mindspore [[安装](https://www.mindspore.cn/install)] 请按照mindocr分支安装对应版本MindSpore。
 - python >= 3.7
@@ -163,7 +163,7 @@ pip install mindocr
 
 ### 1. 文字检测和识别示例
 
-安装完MindOCR后，我们就很方便地进行任意图像的文本检测和识别，如下。
+安装完MindSpore OCR后，我们就很方便地进行任意图像的文本检测和识别，如下。
 
 ```shell
 python tools/infer/text/predict_system.py --image_dir {path_to_img or dir_to_imgs} \
@@ -190,7 +190,7 @@ python tools/train.py --config {path/to/model_config.yaml}
 ```
 `--config` 参数用于指定yaml文件的路径，该文件定义要训练的模型和训练策略，包括数据处理流程、优化器、学习率调度器等。
 
-MindOCR在`configs`文件夹中提供系列SoTA的OCR模型及其训练策略，用户可以快速将其适配到自己的任务或数据集上，参考例子如下
+MindSpore OCR在`configs`文件夹中提供系列SoTA的OCR模型及其训练策略，用户可以快速将其适配到自己的任务或数据集上，参考例子如下
 
 ```shell
 # train text detection model DBNet++ on icdar15 dataset
@@ -220,7 +220,7 @@ python tools/infer/text/predict_system.py --image_dir {path_to_img or dir_to_img
 
 ### 3. 模型离线推理
 
-你可以在MindOCR中对 **MindOCR原生模型** 或 **第三方模型**（如PaddleOCR、MMOCR等）进行MindSpore Lite推理。详情请参考[模型离线推理教程](docs/zh/inference/inference_tutorial.md)。
+你可以在MindSpore OCR中对 **MindSpore OCR原生模型** 或 **第三方模型**（如PaddleOCR、MMOCR等）进行MindSpore Lite推理。详情请参考[模型离线推理教程](docs/zh/inference/inference_tutorial.md)。
 
 ## <span id="使用教程">使用教程</span>
 
@@ -298,11 +298,11 @@ python tools/infer/text/predict_system.py --image_dir {path_to_img or dir_to_img
 关于以上模型的具体训练方法和结果，请参见[configs](configs)下各模型子目录的readme文档。
 
 [MindSpore Lite](https://www.mindspore.cn/lite)模型推理的支持列表，
-请参见[MindOCR原生模型推理支持列表](docs/zh/inference/mindocr_models_list.md) 和 [第三方模型推理支持列表](docs/zh/inference/thirdparty_models_list.md)（如PaddleOCR）。
+请参见[MindSpore OCR原生模型推理支持列表](docs/zh/inference/mindocr_models_list.md) 和 [第三方模型推理支持列表](docs/zh/inference/thirdparty_models_list.md)（如PaddleOCR）。
 
 ## 数据集列表
 
-MindOCR提供了[数据格式转换工具](https://github.com/mindspore-lab/mindocr/blob/main/tools/dataset_converters) ，以支持不同格式的OCR数据集，支持用户自定义的数据集。
+MindSpore OCR提供了[数据格式转换工具](https://github.com/mindspore-lab/mindocr/blob/main/tools/dataset_converters) ，以支持不同格式的OCR数据集，支持用户自定义的数据集。
 当前已在模型训练评估中验证过的公开OCR数据集如下。
 
 <details close markdown>
@@ -463,7 +463,7 @@ MindOCR提供了[数据格式转换工具](https://github.com/mindspore-lab/mind
 
 ### 如何贡献
 
-我们欢迎包括问题单和PR在内的所有贡献，来让MindOCR变得更好。
+我们欢迎包括问题单和PR在内的所有贡献，来让MindSpore OCR变得更好。
 
 请参考[CONTRIBUTING.md](CONTRIBUTING_CN.md)作为贡献指南，请按照[Model Template and Guideline](mindocr/models/README_CN.md)的指引贡献一个适配所有接口的模型，多谢合作。
 
